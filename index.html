@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./bulma.min.css">
+    <title>CriptoWords</title>
+</head>
+<body>
+    <div>
+        <section class="hero is-dark is-medium">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092703.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="navbar-menu">
+                            <div class="navbar-end">
+                                <a href="#" class="navbar-item">Início</a>
+                                <a href="#util" class="navbar-item">Como utilizar</a>
+                                <a href="https://github.com/jotasouza/challenge-oracle-semana1e2" target="_blank" class="navbar-item">Sobre</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section class="hero is-primary is-bold pb-6">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">CriptoWords</h1>
+                    <h5 class="subtitle">Crie mensagens criptografas e compartilhe com seus amigos!</h5>
+                </div>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Insira seu texto aqui</label>
+                            <div class="control">
+                                <textarea class="textarea is-info is-focused" placeholder="Digite o texto" rows="5"></textarea>
+                            </div>
+                            <p class="help">Número máximo de linhas: 5</p>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link">
+                                    Criptografar
+                                  </button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light">
+                                    Descriptografar
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Resultado</label>
+                            <div class="control is-loading">
+                                <textarea class="textarea is-info has-fixed-size" rows="5" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-grouped pt-5">
+                            <div class="control">
+                                <button class="button is-link">
+                                    Copiar
+                                  </button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link">
+                                    Dowonload
+                                  </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h2 class="title" id="util">Como Utilizar o CriptoWords<h2>
+                    <h5 class="subtitle">Veja como é fácil utilizar o CriptoWords!</h5>
+                </div>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <h4 class="title is-4">Passo 1:</h4>
+                        <figure>
+                            <img src="./images/note.png" alt="Note">
+                        </figure>
+                        <p>Primeiro você digita ou cola o texto que você deseja criptografar.</p>
+                    </div>
+                    <div class="column">
+                        <h4 class="title is-4">Passo 2:</h4>
+                        <figure>
+                            <img src="./images/click.png" alt="Click">
+                        </figure>
+                        <p>Escolha uma das opções e clique no botão abaixo da caixa de texto.</p>
+                    </div>
+                    <div class="column">
+                        <h4 class="title is-4">Passo 3:</h4>
+                        <figure>
+                            <img src="./images/files.png" alt="Files">
+                        </figure>
+                        <p>Com o seu texto criptografado, você pode copiá-lo ou baixar ele em seu dispositivo.</p>
+                    </div>
+                    <div class="column">
+                        <h4 class="title is-4">Passo 4:</h4>
+                        <figure>
+                            <img src="./images/switch.png" alt="Switch">
+                        </figure>
+                        <p>Caso queira descriptografar seu texto, insira na caixa de texto e clique no botão descriptografar.</p>
+                    </div>
+            </div>
+        </section>
+        <section class="hero">
+            <footer class="footer mb-6 pb-0"">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>CriptoWords</strong> by <a href="https://github.com/jotasouza" target="_blank" rel="noopener noreferrer">Jonatas Souza</a> since 2022.
+                        O código fonte é licenciado <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </div>
+    
+    
+
+   
+    
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>CriptoWords</title>
 </head>
 <body>
@@ -16,14 +17,16 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092703.png" alt="Logo">
+                                <figure>
+                                    <img src="./images/dados-criptografados.png" alt="Logo">
+                                </figure>
                             </a>
                         </div>
                         <div class="navbar-menu">
                             <div class="navbar-end">
                                 <a href="#" class="navbar-item">Início</a>
                                 <a href="#util" class="navbar-item">Como utilizar</a>
-                                <a href="https://github.com/jotasouza/challenge-oracle-semana1e2" target="_blank" class="navbar-item">Sobre</a>
+                                <a href="#sobre" class="navbar-item">Sobre</a>
                             </div>
                         </div>
                     </div>
@@ -84,47 +87,65 @@
                 </div>
             </div>
         </section>
-        <section class="hero">
+        <section class="hero mt-6 mb-6">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h2 class="title" id="util">Como Utilizar o CriptoWords<h2>
                     <h5 class="subtitle">Veja como é fácil utilizar o CriptoWords!</h5>
                 </div>
             </div>
-            <div class="container">
+            <div class="container mt-3 mb-3">
                 <div class="columns">
-                    <div class="column">
+                    <div class="column is-horizontal-center">
                         <h4 class="title is-4">Passo 1:</h4>
                         <figure>
                             <img src="./images/note.png" alt="Note">
                         </figure>
-                        <p>Primeiro você digita ou cola o texto que você deseja criptografar.</p>
+                        <p class="is-horizontal-justify">Primeiro você digita ou cola o texto que você deseja criptografar.</p>
                     </div>
-                    <div class="column">
+                    <div class="column is-horizontal-center">
                         <h4 class="title is-4">Passo 2:</h4>
                         <figure>
                             <img src="./images/click.png" alt="Click">
                         </figure>
-                        <p>Escolha uma das opções e clique no botão abaixo da caixa de texto.</p>
+                        <p class="is-horizontal-justify">Escolha uma das opções e clique no botão abaixo da caixa de texto.</p>
                     </div>
-                    <div class="column">
+                    <div class="column is-horizontal-center">
                         <h4 class="title is-4">Passo 3:</h4>
                         <figure>
                             <img src="./images/files.png" alt="Files">
                         </figure>
-                        <p>Com o seu texto criptografado, você pode copiá-lo ou baixar ele em seu dispositivo.</p>
+                        <p class="is-horizontal-justify">Com o seu texto criptografado, você pode copiá-lo ou baixar ele em seu dispositivo.</p>
                     </div>
-                    <div class="column">
+                    <div class="column is-horizontal-center">
                         <h4 class="title is-4">Passo 4:</h4>
                         <figure>
                             <img src="./images/switch.png" alt="Switch">
                         </figure>
-                        <p>Caso queira descriptografar seu texto, insira na caixa de texto e clique no botão descriptografar.</p>
+                        <p class="is-horizontal-justify">Caso queira descriptografar seu texto, insira na caixa de texto e clique no botão descriptografar.</p>
                     </div>
             </div>
         </section>
+        <section class="hero mt-6 mb-6">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h2 class="title is-3" id="sobre">Sobre</h2>
+                    <h4 class="subtitle is-5">Conheça sobre o CriptoWords e o que motivou seu desenvolvimento</h4>
+                </div>
+            </div>
+            <div class="container">
+                    <label class="is-horizontal-justify">
+                        <p>O CriptoWords é uma aplicação desenvolvida durante o Chanllenge Oracle One. Seu objetivo é criptografar pequenos textos, substituindo algumas letras contidas no texto
+                            escrito, por outras palavras sem contexto, afim de simular o funcionamento de um hash criptográfico.</p>
+                        <p>Seu desenvolvimento é estritamente educacional, para fixar os conhecimentos adquiridos durante o curso ofertado pela Oracle do Brasil em parceria com a Alura.
+                            Conheça mais sobre <a href="#" target="_blank">Oracle do Brasil</a> e também sobre a <a href="#" target="_blank">Alura</a>.
+                        </p>    
+                       
+                    </label>
+            </div>
+        </section>
         <section class="hero">
-            <footer class="footer mb-6 pb-0"">
+            <footer class="footer mb-6 pb-4">
                 <div class="content has-text-centered">
                     <p>
                         <strong>CriptoWords</strong> by <a href="https://github.com/jotasouza" target="_blank" rel="noopener noreferrer">Jonatas Souza</a> since 2022.

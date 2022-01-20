@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./bulma.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>CriptoWords</title>
+    <title>Secret Words</title>
 </head>
 <body>
     <div>
@@ -17,12 +17,17 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item">
-                                <figure>
+                                <figure class="image">
                                     <img src="./images/dados-criptografados.png" alt="Logo">
                                 </figure>
                             </a>
+                            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burguer">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                              </a>
                         </div>
-                        <div class="navbar-burger">
+                        <div class="navbar-menu" id="nav-links">
                             <div class="navbar-end">
                                 <a href="#" class="navbar-item">Início</a>
                                 <a href="#util" class="navbar-item">Como utilizar</a>
@@ -36,8 +41,8 @@
         <section class="hero is-primary is-bold pb-6">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h1 class="title is-1">CriptoWords</h1>
-                    <h5 class="subtitle">Crie mensagens criptografas e compartilhe com seus amigos!</h5>
+                    <h1 class="title is-1">Secret Words</h1>
+                    <h5 class="subtitle">Crie mensagens codificadas e compartilhe com seus amigos!</h5>
                 </div>
             </div>
             <div class="container">
@@ -46,18 +51,18 @@
                         <div class="field">
                             <label class="label">Insira seu texto aqui</label>
                             <div class="control">
-                                <textarea class="textarea is-info is-focused" placeholder="Digite o texto" rows="5"></textarea>
+                                <textarea class="textarea is-info is-focused" id="textAreaOne" placeholder="Digite o texto" rows="5"></textarea>
                             </div>
                             <p class="help">Número máximo de linhas: 5</p>
                         </div>
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link">
+                                <button class="button is-link" id="encode">
                                     Criptografar
                                   </button>
                             </div>
                             <div class="control">
-                                <button class="button is-link is-light">
+                                <button class="button is-link is-light" id="decode">
                                     Descriptografar
                                   </button>
                             </div>
@@ -66,19 +71,20 @@
                     <div class="column">
                         <div class="field">
                             <label class="label">Resultado</label>
-                            <div class="control is-loading">
-                                <textarea class="textarea is-info has-fixed-size" rows="5" readonly></textarea>
+                            <div class="control">
+                                <textarea class="textarea is-info size" id="textAreaTwo" rows="5" readonly></textarea>
+                                <p id="texto"></p>
                             </div>
                         </div>
                         <div class="field is-grouped pt-5">
                             <div class="control">
-                                <button class="button is-link">
+                                <button class="button is-link" id="copy" onclick="onCopy()">
                                     Copiar
                                   </button>
                             </div>
                             <div class="control">
-                                <button class="button is-link">
-                                    Dowonload
+                                <button class="button is-link" id="download" onclick="download()">
+                                    Download
                                   </button>
                             </div>
                         </div>
@@ -86,58 +92,59 @@
                     </div>
                 </div>
             </div>
+            <p id="util"></p>
         </section>
         <section class="hero mt-6 mb-6">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h2 class="title" id="util">Como Utilizar o CriptoWords<h2>
-                    <h5 class="subtitle">Veja como é fácil utilizar o CriptoWords!</h5>
+                    <h2 class="title" >Como Utilizar o Secret Words<h2>
+                    <h5 class="subtitle">Veja como é fácil utilizar o Secret Words!</h5>
                 </div>
             </div>
             <div class="container mt-3 mb-3">
                 <div class="columns">
-                    <div class="column is-horizontal-center">
-                        <h4 class="title is-4">Passo 1:</h4>
-                        <figure>
+                    <div class="column">
+                        <h4 class="title is-4 is-horizontal-center">Passo 1:</h4>
+                        <figure class="is-horizontal-center">
                             <img src="./images/note.png" alt="Note">
                         </figure>
-                        <p class="is-horizontal-justify">Primeiro você digita ou cola o texto que você deseja criptografar.</p>
+                        <p class="has-text-centered">Primeiro você digita ou cola o texto que você deseja codificar.</p>
                     </div>
-                    <div class="column is-horizontal-center">
-                        <h4 class="title is-4">Passo 2:</h4>
-                        <figure>
+                    <div class="column">
+                        <h4 class="title is-4 is-horizontal-center">Passo 2:</h4>
+                        <figure class="is-horizontal-center">
                             <img src="./images/click.png" alt="Click">
                         </figure>
-                        <p class="is-horizontal-justify">Escolha uma das opções e clique no botão abaixo da caixa de texto.</p>
+                        <p class="has-text-centered">Escolha uma das opções e clique no botão abaixo da caixa de texto.</p>
                     </div>
-                    <div class="column is-horizontal-center">
-                        <h4 class="title is-4">Passo 3:</h4>
-                        <figure>
+                    <div class="column">
+                        <h4 class="title is-4 is-horizontal-center">Passo 3:</h4>
+                        <figure class="is-horizontal-center">
                             <img src="./images/files.png" alt="Files">
                         </figure>
-                        <p class="is-horizontal-justify">Com o seu texto criptografado, você pode copiá-lo ou baixar ele em seu dispositivo.</p>
+                        <p class="has-text-centered">Com o seu texto codificado, você pode copiá-lo ou baixar ele em seu dispositivo.</p>
                     </div>
-                    <div class="column is-horizontal-center">
-                        <h4 class="title is-4">Passo 4:</h4>
-                        <figure>
+                    <div class="column">
+                        <h4 class="title is-4 is-horizontal-center">Passo 4:</h4>
+                        <figure class="is-horizontal-center">
                             <img src="./images/switch.png" alt="Switch">
                         </figure>
-                        <p class="is-horizontal-justify">Caso queira descriptografar seu texto, insira na caixa de texto e clique no botão descriptografar.</p>
+                        <p class="has-text-centered">Caso queira decodificar seu texto, insira na caixa de texto e clique no botão decodificar.</p>
                     </div>
             </div>
         </section>
         <section class="hero mt-6 mb-6">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h2 class="title is-3" id="sobre">Sobre</h2>
-                    <h4 class="subtitle is-5">Conheça sobre o CriptoWords e o que motivou seu desenvolvimento</h4>
+                    <h2 class="title is-3" >Sobre</h2>
+                    <h4 class="subtitle is-5">Conheça sobre o Secret Words e o que motivou seu desenvolvimento</h4>
                 </div>
             </div>
-            <div class="container">
-                    <label class="is-horizontal-justify">
-                        <p>O CriptoWords é uma aplicação desenvolvida durante o Chanllenge Oracle One. Seu objetivo é criptografar pequenos textos, substituindo algumas letras contidas no texto
+            <div class="container has-text-centered mr-3 ml-3">
+                    <label>
+                        <p>O Secret Words é uma aplicação desenvolvida durante o Chanllenge Oracle One. Seu objetivo é criptografar pequenos textos, substituindo algumas letras contidas no texto
                             escrito, por outras palavras sem contexto, afim de simular o funcionamento de um hash criptográfico.</p>
-                        <p>Seu desenvolvimento é estritamente educacional, para fixar os conhecimentos adquiridos durante o curso ofertado pela Oracle do Brasil em parceria com a Alura.
+                        <p id="sobre">Seu desenvolvimento é estritamente educacional, para fixar os conhecimentos adquiridos durante o curso ofertado pela Oracle do Brasil em parceria com a Alura.
                             Conheça mais sobre <a href="#" target="_blank">Oracle do Brasil</a> e também sobre a <a href="#" target="_blank">Alura</a>.
                         </p>    
                        
@@ -148,7 +155,7 @@
             <footer class="footer pb-4">
                 <div class="content has-text-centered">
                     <p>
-                        <strong>CriptoWords</strong> by <a href="https://github.com/jotasouza" target="_blank" rel="noopener noreferrer">Jonatas Souza</a> since 2022.
+                        <strong>Secret Words</strong> by <a href="https://github.com/jotasouza" target="_blank" rel="noopener noreferrer">Jonatas Souza</a> since 2022.
                         O código fonte é licenciado <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>
                     </p>
                 </div>

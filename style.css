@@ -5,3 +5,16 @@
 .is-horizontal-justify{
     text-align: justify;
 }
+
+.size{
+    width: 270px;
+}
+
+.image{
+    width: 40px;
+    height: 30px;
+}
+
+.color{
+    background-color: darkgrey;
+}

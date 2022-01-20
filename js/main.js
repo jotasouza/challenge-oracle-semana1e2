@@ -84,5 +84,7 @@ buttonDecode.addEventListener('click', function(){
 
 
 let buttonCopy = documen.getElementById('copy')
+buttonCopy.onclick = onCopy
 
 let buttonDownload = document.getElementById('download')
+buttonDownload.onclick = download
